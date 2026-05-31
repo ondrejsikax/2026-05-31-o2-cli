@@ -1,6 +1,7 @@
 package root
 
 import (
+	"github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/example"
 	"github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/hello"
 	cmd_version "github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/version"
 	"github.com/ondrejsikax/2026-05-31-o2-cli/version"
@@ -15,4 +16,5 @@ var Cmd = &cobra.Command{
 func init() {
 	Cmd.AddCommand(hello.Cmd)
 	Cmd.AddCommand(cmd_version.Cmd)
+	Cmd.AddCommand(example.Cmd)
 }
