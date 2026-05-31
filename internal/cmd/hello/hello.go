@@ -10,11 +10,16 @@ var Cmd = &cobra.Command{
 	Use:   "hello [name]",
 	Short: "Say hello",
 	Args:  cobra.MaximumNArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
+	Run: func(c *cobra.Command, args []string) {
 		name := "O2"
 		if len(args) > 0 {
 			name = args[0]
 		}
-		fmt.Printf("Hello %s!\n", name)
+
+		hello(name)
 	},
+}
+
+func hello(name string) {
+	fmt.Printf("Hello %s!\n", name)
 }
