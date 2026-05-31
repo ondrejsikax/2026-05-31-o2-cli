@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"os"
+
+	"github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/root"
+)
 
 func main() {
-	fmt.Println("Hello O2")
+	if err := root.Cmd.Execute(); err != nil {
+		os.Exit(1)
+	}
 }
