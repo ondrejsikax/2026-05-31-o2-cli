@@ -1,6 +1,7 @@
 package root
 
 import (
+	"github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/dogsay"
 	"github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/example"
 	"github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/hello"
 	"github.com/ondrejsikax/2026-05-31-o2-cli/internal/cmd/random"
@@ -19,4 +20,5 @@ func init() {
 	Cmd.AddCommand(cmd_version.Cmd)
 	Cmd.AddCommand(example.Cmd)
 	Cmd.AddCommand(random.Cmd)
+	Cmd.AddCommand(dogsay.Cmd)
 }
