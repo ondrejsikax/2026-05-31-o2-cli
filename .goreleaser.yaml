@@ -35,3 +35,20 @@ archives:
 
 checksum:
   name_template: "checksums.txt"
+
+brews:
+  -
+    name: o2
+    repository:
+      owner: ondrejsikax
+      name: homebrew-tap
+    skip_upload: auto
+    homepage: https://github.com/ondrejsikax/2026-05-31-o2-cli
+    url_template: "https://github.com/ondrejsikax/2026-05-31-o2-cli/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    directory: Formula
+    caveats: "How to use this binary: https://github.com/ondrejsikax/2026-05-31-o2-cli"
+    description: "O2 CLI"
+    install: |
+      bin.install "o2"
+    test: |
+      system "#{bin}/o2 version"
