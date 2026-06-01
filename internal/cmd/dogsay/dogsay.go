@@ -9,7 +9,7 @@ import (
 
 var Cmd = &cobra.Command{
 	Use:   "dogsay <text...>",
-	Short: "Say hello",
+	Short: "Dog say something",
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(c *cobra.Command, args []string) {
 		dogsay.PrintDogSay(strings.Join(args, " "))
