@@ -16,3 +16,9 @@ Master branch
 ```
 go install github.com/ondrejsikax/2026-05-31-o2-cli/cmd/o2@master
 ```
+
+## Install using Homebrew
+
+```
+brew install ondrejsikax/tap/o2
+```
